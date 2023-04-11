@@ -47,20 +47,30 @@ h6 {
   height: 100%;
 }
 .logo-container{
+  max-width: 45%;
   padding: 2rem;
 }
 .hero-image-container{
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 .hero-image{
   width: 100%;
 }
 h1{
   text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 10px;
 }
 .body-content{
+  padding: 2.5rem;
   text-align: center;
+}
+h1, .body-content p{
+  margin-bottom: 20px;
 }
 .accent-color{
   color: hsl(0, 36%, 70%);
+}
+.accent-style{
+  font-weight: 300;
 }
