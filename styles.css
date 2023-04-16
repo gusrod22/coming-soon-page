@@ -42,12 +42,24 @@ h6 {
   isolation: isolate;
 }
 .main-container {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "hero"
+    "content";
+  gap: 1rem;
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
   height: 100%;
 }
+img{
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+}
 .logo-container {
+  grid-area: logo;
   max-width: 45%;
   padding: 2rem;
 }
@@ -64,10 +76,15 @@ h6 {
   width: 20%;
 }
 .hero-image-container {
+  grid-area: hero;
   margin-bottom: 15px;
 }
-.hero-image {
+.hero-mobile {
   width: 100%;
+  object-fit: cover;
+}
+.hero-desktop{
+  display: none;
 }
 h1 {
   text-transform: uppercase;
@@ -76,6 +93,7 @@ h1 {
   line-height: 3.2rem;
 }
 .body-content {
+  grid-area: content;
   padding: 2.5rem;
 }
 h1,
@@ -119,5 +137,22 @@ input {
 }
 
 @media only screen and (min-width: 1440px){
-
+  .main-container {
+    grid-template-columns: 2fr 1.25fr;
+    grid-template-areas:
+      "logo hero"
+      "content hero";
+  }
+  .logo-container{
+    max-width: 50%;
+  }
+  .hero-image-container{
+    height: 100%;
+  }
+  .hero-mobile{
+    display: none;
+  }
+  .hero-desktop{
+    display:block
+  }
 }
