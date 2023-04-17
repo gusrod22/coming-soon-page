@@ -47,6 +47,7 @@ h6 {
     "logo"
     "hero"
     "content";
+  grid-template-rows: 100px auto 1fr;
   gap: 1rem;
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
@@ -62,6 +63,9 @@ img{
   grid-area: logo;
   max-width: 45%;
   padding: 2rem;
+}
+svg {
+	height: 100%;
 }
 .arrow-container {
   padding: 1.5rem;
@@ -138,13 +142,18 @@ input {
 
 @media only screen and (min-width: 1440px){
   .main-container {
+    text-align: left;
     grid-template-columns: 2fr 1.25fr;
     grid-template-areas:
       "logo hero"
       "content hero";
+      grid-template-rows: 200px 1fr;
   }
   .logo-container{
-    max-width: 50%;
+    padding-left: 8rem;
+    padding-top: 5rem;
+    max-width: 40%;
+    
   }
   .hero-image-container{
     height: 100%;
@@ -154,5 +163,11 @@ input {
   }
   .hero-desktop{
     display:block
+  }
+  .body-content{
+    font-size: 1.4rem;
+    margin-top: 150px;
+    padding-left: 8rem;
+    padding-right: 18rem;
   }
 }
