@@ -54,7 +54,7 @@ h6 {
   width: 100%;
   height: 100%;
 }
-img{
+img {
   /* width: 100%; */
   height: 100%;
   object-fit: cover;
@@ -65,19 +65,7 @@ img{
   padding: 2rem;
 }
 svg {
-	height: 100%;
-}
-.arrow-container {
-  padding: 1.5rem;
-  border-radius: 50px;
-  background: linear-gradient(
-    135deg,
-    hsl(0, 0%, 100%) 0%,
-    hsl(0, 100%, 98%) 5%,
-    hsl(0, 80%, 86%) 30%,
-    hsl(0, 74%, 74%) 100%
-  );
-  width: 20%;
+  height: 100%;
 }
 .hero-image-container {
   grid-area: hero;
@@ -87,7 +75,7 @@ svg {
   width: 100%;
   object-fit: cover;
 }
-.hero-desktop{
+.hero-desktop {
   display: none;
 }
 h1 {
@@ -119,6 +107,8 @@ input {
 }
 .input-container {
   position: relative;
+  border-radius: 50px;
+  position: relative;
 }
 .arrow-container {
   display: flex;
@@ -130,44 +120,74 @@ input {
   right: 0;
   width: 75px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 100%, 98%) 5%,
+    hsl(0, 80%, 86%) 30%,
+    hsl(0, 74%, 74%) 100%
+  );
+}
+.arrow-container:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 100%, 98%) 3%,
+    hsl(0, 80%, 86%) 75%,
+    hsl(0, 74%, 74%) 100%
+  );
 }
 
 .arrow-svg {
   height: 25px;
 }
-.error-message{
-  color: hsl(0, 36%, 70%);
+.error-message {
+  color: hsl(0, 93%, 68%);
   margin-top: 10px;
 }
 
-@media only screen and (min-width: 1440px){
+.input-container.error-icon #email-input {
+  background-image: url("/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 250px 50%;
+}
+input:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 1440px) {
   .main-container {
     text-align: left;
     grid-template-columns: 2fr 1.25fr;
     grid-template-areas:
       "logo hero"
       "content hero";
-      grid-template-rows: 200px 1fr;
+    grid-template-rows: 200px 1fr;
   }
-  .logo-container{
+  .logo-container {
     padding-left: 8rem;
     padding-top: 5rem;
     max-width: 40%;
-    
   }
-  .hero-image-container{
+  .hero-image-container {
     height: 100%;
   }
-  .hero-mobile{
+  .hero-mobile {
     display: none;
   }
-  .hero-desktop{
-    display:block
+  .hero-desktop {
+    display: block;
   }
-  .body-content{
+  .body-content {
     font-size: 1.4rem;
     margin-top: 150px;
     padding-left: 8rem;
     padding-right: 18rem;
+  }
+  .input-container.error-icon #email-input {
+    background-position: 500px 50%;
   }
 }
