@@ -106,7 +106,6 @@ input {
   width: 100%;
 }
 .input-container {
-  position: relative;
   border-radius: 50px;
   position: relative;
 }
@@ -144,6 +143,11 @@ input {
 .arrow-svg {
   height: 25px;
 }
+.error-icon-container {
+	position: absolute;
+	top: 25%;
+	right: 110px;
+}
 .error-message {
   color: hsl(0, 93%, 68%);
   margin-top: 10px;
@@ -156,6 +160,9 @@ input {
 }
 input:focus {
   outline: none;
+}
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -187,7 +194,7 @@ input:focus {
     padding-left: 8rem;
     padding-right: 18rem;
   }
-  .input-container.error-icon #email-input {
-    background-position: 500px 50%;
+  .error-svg{
+    right: 145px;
   }
 }
